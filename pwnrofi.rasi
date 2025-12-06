@@ -1,0 +1,47 @@
+* {
+    font: "BigBlueTermPlus Nerd Font Mono 9";
+    background-color: #000000;
+    text-color: #00ff00;
+    border-color: #00ff00;
+}
+
+window {
+    width: 800px;
+    border: 1px;
+    padding: 10px;
+    children: [main];
+}
+
+main {
+    orientation: vertical;
+    children: [promptEntry, overlay, message, listview, num-rows];
+    spacing: 5px;
+}
+
+promptEntry {
+    orientation: vertical;
+    children: [prompt, entry];
+    expand: false;
+}
+
+entry {
+    expand: false;
+    border: 1px;
+    padding: 5px;
+    cursor-width: 6px;
+}
+
+entry, element-text, textbox {
+    highlight: underline magenta;
+}
+
+listview {
+    lines: 16;
+    columns: 2;
+    scrollbar: false;
+}
+
+element-text selected{
+    background-color: #00ff00;
+    color: #000000;
+}
